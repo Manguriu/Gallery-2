@@ -28,7 +28,7 @@ function Card({
       onClick={handleClick}
     >
       <div
-        className="flex  sm:h-40 rounded-xl max-sm:p-4 hover:cursor-pointer "
+        className="flex sm:h-40 rounded-xl max-sm:p-4 hover:cursor-pointer "
         style={{
           backgroundImage: `url(${imgURL.heroImg})`,
           backgroundSize: "cover",

@@ -8,11 +8,11 @@ export const options: NextAuthOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "text", placeholder: "jsmith@gmail.com" },
+        email: { label: "Email", type: "text", placeholder: "user@example.com" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
-        const user = { id: "1", name: "newuser", email: "jmsmith@gmail.com", password: "123456" };
+        const user = { id: "1", name: "newuser", email: "user@example.com", password: "1Password" };
 
 
         console.log("Received credentials:", credentials);
@@ -62,5 +62,5 @@ function generateToken(user: {
 function decryptToken(_token: string, jwtSecret: string) {
 
 
-  return { id: "1", name: "new user", email: "jmsmith@gmail.com" };
+  return { id: "1", name: "newuser", email: "user@example.com" };
 }

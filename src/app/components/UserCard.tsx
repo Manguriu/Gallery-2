@@ -28,10 +28,9 @@ export default function Card({ user, pagetype }: Props) {
   ) : null;
 
   return (
-    <section className="flex flex-col gap-4 px-4">
+    <section className="flex flex-col px-4">
       {greeting}
-
-      <section className="pb-10 mb-[9rem]">
+      <section className="pb-10 mb-[2rem]">
         <HeroContext />
       </section>
       <section className="mb-[5rem]">

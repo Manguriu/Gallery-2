@@ -47,7 +47,7 @@ function MiainC({}: Props) {
   };
 
   return (
-    <section className="max-container max-xl:mt-[15rem] max-sm:mt-[1rem]">
+    <section className="max-container  max-sm:mt-[1rem]">
       <div>
         <h3 className="max-sm:text-2xl max-sm:ml-4 text-2xl font-bold font-Montserrat capitalize">
           Enjoy <span className="text-cyan-600">Our </span>Cool{" "}

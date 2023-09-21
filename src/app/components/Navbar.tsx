@@ -8,8 +8,8 @@ export default function Navbar() {
     //     </li>
     //   </ul>
     // </nav>
-    <header className="max-container mt-5">
-      <nav className=" flex justify-between items-center w-full">
+    <header className="max-container mt-5 bg-cyan-200 px-4 py-2 rounded-xl">
+      <nav className=" flex justify-between items-center">
         <a href="/">
           <h1 className="text-3xl font-semibold text-cyan-600 max-xl:hidden">
             |ImageGala|
