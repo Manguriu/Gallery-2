@@ -1,7 +1,6 @@
 import Image from "next/image";
 import MiainC from "./corasel/MiainC";
 import HeroContext from "./hero/HeroContext";
-import HomeImage from "./homeC/HomeImage";
 
 type User =
   | {
