@@ -47,7 +47,6 @@ export default function ClientPage() {
     fetchData();
   }, [term]);
 
-  // Check if we are on the client side
   const isClient = typeof window !== "undefined";
 
   const [items, setItems] = useState(Gimages);
