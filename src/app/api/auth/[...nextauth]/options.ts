@@ -8,35 +8,28 @@ export const options: NextAuthOptions = {
     CredentialsProvider({
       name: "Credentials",
       credentials: {
-        email: { label: "Email", type: "text", placeholder: "user@example.com" },
-        password: { label: "Password", type: "password" },
+        username: {
+          label: "Email:",
+          type: "text",
+          placeholder: "your@gmail.com",
+        },
+        password: {
+          label: "Password:",
+          type: "password",
+          placeholder: "password",
+        },
       },
-      async authorize(credentials, req) {
-        const user = { id: "1", name: "newuser", email: "user@example.com", password: "1Password" };
+      async authorize(credentials) {
+        const user = {
+          id: "42",
+          email: "user@example.com",
+          password: "1Password",
+        };
 
-
-        console.log("Received credentials:", credentials);
-        console.log("Expected user data:", user);
-
-        const jwtSecret = process.env.NEXTAUTH_SECRET;
-        if (!jwtSecret) {
-          console.error("JWT secret is not set.");
-          return null;
-        }
-
-
-        console.log("JWT Secret:", jwtSecret);
-
-
-        const token = generateToken(user, jwtSecret);
-
- 
-        console.log("Generated Token:", token);
-
-
-        const decodedUser = decryptToken(token, jwtSecret);
-
-        if (decodedUser) {
+        if (
+          credentials?.username === user.email &&
+          credentials?.password === user.password
+        ) {
           return user;
         } else {
           return null;
@@ -44,23 +37,4 @@ export const options: NextAuthOptions = {
       },
     }),
   ],
-
-
-  secret: process.env.NEXTAUTH_SECRET,
 };
-
-
-function generateToken(user: {
-        id: string; name: string; email: string; password:
-         
-            string;
-    }, jwtSecret: string) {
-
-
-  return 'your-static-token-here';
-}
-function decryptToken(_token: string, jwtSecret: string) {
-
-
-  return { id: "1", name: "newuser", email: "user@example.com" };
-}
