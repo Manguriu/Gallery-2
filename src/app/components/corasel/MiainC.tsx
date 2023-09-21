@@ -16,7 +16,7 @@ function MiainC({}: Props) {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     initialSlide: 0,
     responsive: [
       {
@@ -47,9 +47,9 @@ function MiainC({}: Props) {
   };
 
   return (
-    <section className="max-container">
+    <section className="max-container max-xl:mt-[15rem] max-sm:mt-[1rem]">
       <div>
-        <h3 className="max-sm:text-2xl max-sm:ml-4 text-4xl font-bold font-Montserrat capitalize">
+        <h3 className="max-sm:text-2xl max-sm:ml-4 text-2xl font-bold font-Montserrat capitalize">
           Enjoy <span className="text-cyan-600">Our </span>Cool{" "}
           <span className="text-cyan-600">Slideshow..</span>
         </h3>

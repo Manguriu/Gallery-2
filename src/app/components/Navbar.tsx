@@ -2,24 +2,34 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-blue-800 p-4">
-      <ul className="flex justify-evenly text-2xl font-bold">
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/api/auth/signin">Sign In</Link>
-        </li>
-        <li>
-          <Link href="/api/auth/signout">Sign Out</Link>
-        </li>
-        <li>
-          <Link href="/server">server</Link>
-        </li>
-        <li>
-          <Link href="/client">client</Link>
-        </li>
-      </ul>
-    </nav>
+    //     </li>
+    //     <li>
+    //       <Link href="/client">client</Link>
+    //     </li>
+    //   </ul>
+    // </nav>
+    <header className="max-container mt-5">
+      <nav className=" flex justify-between items-center w-full">
+        <a href="/">
+          <h1 className="text-3xl font-semibold text-cyan-600 max-xl:hidden">
+            |ImageGala|
+          </h1>
+        </a>
+        <ul className="flex justify-center items-center lg:gap-5 ">
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-600 px-6 py-2 hover:text-white rounded-lg">
+            <a href="/"> Home</a>
+          </li>
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-600 px-6 py-2 hover:text-white rounded-lg">
+            <a href="/client"> Other-images</a>
+          </li>
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-600 px-6 py-2 hover:text-white rounded-lg">
+            <a href="/api/auth/signin"> Login</a>
+          </li>
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-600 px-6 py-2 hover:text-white rounded-lg">
+            <a href="/api/auth/signout"> Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }

@@ -22,13 +22,13 @@ function Card({
   // console.log("images1", images);
   return (
     <div
-      className={`border-2 rounded-xl ${
+      className={`border-2 rounded-xl  ${
         bigImage === imgURL.heroImg ? " border-cyan-300" : "border-transparent"
       } coursor-pointer max-sm:flex-1`}
       onClick={handleClick}
     >
       <div
-        className="flex sm:w-40 sm:h-40 rounded-xl max-sm:p-4 hover:cursor-pointer"
+        className="flex  sm:h-40 rounded-xl max-sm:p-4 hover:cursor-pointer "
         style={{
           backgroundImage: `url(${imgURL.heroImg})`,
           backgroundSize: "cover",

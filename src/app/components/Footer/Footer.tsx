@@ -11,7 +11,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <section className="max-container lg:pt-[5rem] max-sm:pt-2 lg:pb-[5rem] font-montserrat  text-lg mt-6  leading-8 max-sm:ml-4 max-lg:px-4 ">
+    <section className="px-4 w-full lg:pt-[5rem] max-sm:pt-2 lg:pb-[5rem] font-montserrat  text-lg mt-6  leading-8  max-lg:px-4 bg-slate-600 ">
       <div className=" flex items-center justify-between max-sm:flex-col">
         <div>
           {" "}

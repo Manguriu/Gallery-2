@@ -65,16 +65,20 @@ export default function ClientPage() {
   };
 
   return (
-    <section className="">
+    <section className="px-4">
       <Card user={session?.user} pagetype={"Client"} />
 
       {isClient && (
         <section className="max-sm:mt-12 mt-5 max-container">
           <div>
-            <h3 className="text-4xl font-bold font-Montserrat capitalize">
+            <h3 className="text-2xl font-bold font-Montserrat capitalize px-4">
               Image <span className="text-cyan-600">by</span> tags{" "}
               <span className="text-cyan-600">Popularity</span>
             </h3>
+            <p className="mt-5 text-xl text-slate-600 px-4">
+              Play around with images on this Section, From a cool extension
+              from React DnD.....Re-arrange to your own liking.
+            </p>
           </div>
           <DragDropContext onDragEnd={handleDragEnd}>
             <Droppable droppableId="card-container" type="CARD">
@@ -109,7 +113,7 @@ export default function ClientPage() {
         </section>
       )}
 
-      <section className="mb-[10rem]">
+      <section className="mb-[10rem] pt-[7rem]">
         <OtherImages
           images={images}
           loading={loading}
